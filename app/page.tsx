@@ -29,6 +29,7 @@ export default function Home() {
           <li>ChatNBT团队开发	🌟	🌟👽👽</li>
           <li>ChatNBT团队开发	🌟	🌟👽👽</li>
           <li>ChatNBT团队开发	🌟	🌟👽👽</li>
+          <li>ChatNBT团队开发	🌟	🌟👽👽</li>
         </ol>
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
