@@ -1,16 +1,12 @@
-This is code for the following tutorial:
+以下是本仓库的教程
+本仓库来自Youtub @Vuk Rosić (Beam.AI)作者的开源，感谢！
 
 ![ChatGPT Clone](https://i.ytimg.com/vi/_Aeu7BcMoeY/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBENGf8oDCq4nwdPXo0AFVaAy1DMQ)
 
-[VIDEO TUTORIAL](https://youtu.be/_Aeu7BcMoeY?si=f4c4QoosSys86sOV)
-
-![Screenshot_21](https://github.com/user-attachments/assets/52d83582-9d18-42fe-a7f7-a8da83a540d0)
-
+[视频教程](https://youtu.be/_Aeu7BcMoeY?si=f4c4QoosSys86sOV)
+运行效果如下
 ![Screenshot_1](https://github.com/user-attachments/assets/892b1b0d-7e51-4a72-bd12-0e442f87af1a)
-
-![Screenshot_3](https://github.com/user-attachments/assets/c28ad8b7-ab45-4f68-8026-6a727eb569f4)
-
-If you want to run this I recommend following the tutorial. You can also try the following:
+如果你想运行代码，按照如下步骤
 
 ## Required:
 Node version 14.x
@@ -33,17 +29,21 @@ npx convex dev
 You will need to setup Clerk, Convex and other things. Don't forget to add your variables to convex website as well. Here is example .env.local file:
 
 ```env
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
-CLERK_SECRET_KEY=
+# Deployment used by `npx convex dev`
+CONVEX_DEPLOYMENT=dev:fiery-gopher-967 # team: dai-sen-qiu, project: nextjs14-chatgpt-9a539
 
-OPENAI_API_KEY=
+NEXT_PUBLIC_CONVEX_URL=https://fiery-gopher-967.convex.cloud
 
-NEXT_PUBLIC_HOSTING_URL=http://localhost:3000
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_Y2hhbXBpb24tcm9vc3Rlci0zMC5jbGVyay5hY2NvdW50cy5kZXYk
+CLERK_SECRET_KEY=sk_test_eiZ8crlm4RzfARl2g6kkIEp0fNWFOWbQYS1JGdhDGb
+
+
+MOONSHOT_API_KEY=sk-LhTtJlSG4Oe1UjDUA8yvznzp8cXDiLNrl3OAJZZHkcqNue39
+
+NEXT_PUBLIC_HOSTING_URL=localhost:3000
 
 STRIPE_SUBSCRIPTION_PRICE_ID=
-NEXT_STRIPE_PUBLISHABLE_KEY=
 NEXT_STRIPE_SECRET_KEY=
-STRIPE_WEBHOOK_SECRET=
 ```
 
 ## Run the app
