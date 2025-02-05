@@ -1,5 +1,7 @@
+## 本项目来自ChatNBT团队，欢迎给我们提PR
 以下是本仓库的教程
-本仓库来自Youtub @Vuk Rosić (Beam.AI)作者的开源，感谢！
+本项目基于Youtub @Vuk Rosić (Beam.AI)作者的开源，二次开发，感谢开源！
+
 
 ![ChatGPT Clone](https://i.ytimg.com/vi/_Aeu7BcMoeY/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBENGf8oDCq4nwdPXo0AFVaAy1DMQ)
 
