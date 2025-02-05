@@ -26,11 +26,11 @@ export const UpgradePlanButton = () => {
                         open={openUpgradeModal}
                         setOpen={setOpenUpgradeModal}
                     />
-                    <Button className="bg-tranparent gap-x-2 justify-start p-2 h-fit hover:bg-neutral-800" onClick={handleClick}>
-                        <Sparkles className="rounded-full bg-transparent border-[1px] border-neutral-600 rounded-full p-1 fill-white" />
-                        <div className="text-start">
-                            <h3>Upgrade plan</h3>
-                            <h5 className="font-normal text-xs text-zinc-400">Get GPT-4</h5>
+                    <Button className="bg-tranparent gap-x-2 justify-start p-2 h-fit hover:bg-neutral-200" onClick={handleClick}>
+                        <Sparkles className="text-neutral-700 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-token-border-light" />
+                        <div className="text-start ">
+                            <h3 className="text-zinc-900">Upgrade plan</h3>
+                            <h5 className="font-normal text-xs text-zinc-900">Get GPT-4</h5>
                         </div>
                     </Button>
                 </>

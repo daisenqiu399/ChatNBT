@@ -11,12 +11,12 @@ export const MessageBox = ({
     message,
     userImageUrl
 }: MessageBoxProps) => {
-    const nameString = message.role === "user" ? "You" : "TalkGPT";
+    const nameString = message.role === "user" ? "You" : "chatGPT";
     const imageUrl = message.role === "user" ? userImageUrl : "/logo.svg";
 
     return (
         <div
-            className="flex space-x-3 items-start mb-10 max-w-[calc(80%)] md:max-w-full text-wrap"
+            className="flex space-x-1 items-start mb-10 max-w-[calc(80%)] md:max-w-full text-wrap"
         >
             <Avatar className="w-7 h-7 text-white fill-white">
                 <AvatarImage src={imageUrl} className="text-white fill-white" />
@@ -25,8 +25,8 @@ export const MessageBox = ({
                 </AvatarFallback>
             </Avatar>
             <div className="max-w-[calc(80%)]">
-                <h3 className="font-bold">{nameString}</h3>
-                <div className="flex flex-grow flex-col gap-3 gap-y-5">
+                <h3 className="font-bold text-neutral-600">{nameString}</h3>
+                <div className="flex flex-grow flex-col gap-3 gap-y-5 text-neutral-800">
                     <Markdown content={message.content} />
                 </div>
             </div>

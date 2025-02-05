@@ -67,35 +67,35 @@ export const SelectModal = () => {
             <Popover open={openSelect}>
                 <PopoverTrigger
                     onClick={toggleOpen}
-                    className="flex space-x-2 font-semibolditems-center"
+                    className="flex space-x-2 font-semibold items-center"
                 >
-                    <p>ChatGPT</p>
-                    <p className="text-white/50">{GPTVersionText}</p>
-                    <ChevronDown className="text-white/50 w-5 h-5" />
+                    <p className="text-black/100 font-bold">ChatGPT</p>
+                    <p className="text-black/70">{GPTVersionText}</p>
+                    <ChevronDown className="text-black/50 w-5 h-5 my-1" />
                 </PopoverTrigger>
-                <PopoverContent className="flex flex-col border-0 bg-neutral-700 text-white p-3 space-y-4">
+                <PopoverContent className="flex flex-col border-0 text-white p-3 space-y-4">
                     <div
                         onClick={() => handleClick(GPTModel.GPT3)}
-                        className="flex items-center text-start cursor-pointer rounded-md justify-start space-x-2 p-2 w-full h-full hover:bg-neutral-600"
+                        className="flex items-center text-start cursor-pointer rounded-md justify-start space-x-2 p-2 w-full h-full hover:bg-neutral-200"
                     >
-                        <Zap className="w-6 h-6" />
+                        <Zap className="w-6 h-6 text-black" />
                         <div className="w-full">
-                            <p className="font-normal">GPT 3.5</p>
-                            <p className="text-white/70">Great for everyday tasks.</p>
+                            <p className="font-normal text-black">GPT 3.5</p>
+                            <p className="text-black/70">Great for everyday tasks.</p>
                         </div>
                         <Checkbox id="terms1" checked={currentUser.model === GPTModel.GPT3} />
                     </div>
 
                     <div
                         onClick={() => handleClick(GPTModel.GPT4)}
-                        className="flex items-center text-start cursor-pointer rounded-md justify-start space-x-2 p-2 w-full h-full hover:bg-neutral-600"
+                        className="flex items-center text-start cursor-pointer rounded-md justify-start space-x-2 p-2 w-full h-full hover:bg-neutral-200"
                     >
-                        <Sparkles className="w-6 h-6" />
+                        <Sparkles className="w-6 h-6 text-black"/>
                         <div className="w-full">
-                            <p className="font-normal">GPT-4</p>
-                            <p className="text-white/70">Our smartest and best model</p>
+                            <p className="font-normal text-black">GPT-4</p>
+                            <p className="text-black/70">Our smartest and best model</p>
                             {!isSubscribed &&
-                                <div className="w-full p-2 rounded-lg text-white text-xs text-center font-normal cursor-pointer bg-purple-500 active:bg-purple-700 mt-1.5">
+                                <div className="w-full p-2 rounded-lg text-white text-xs text-center font-normal cursor-pointer bg-green-500 active:bg-green-700 mt-1.5">
                                     Upgrade to plus
                                 </div>
                             }
