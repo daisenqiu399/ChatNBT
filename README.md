@@ -1,4 +1,5 @@
 ## 本项目来自ChatNBT团队，欢迎给我们提PR
+### 技术栈：Nextjs+React+convex+tailwindcss+TypeScript+ShadCN
 以下是本仓库的教程
 本项目基于Youtub @Vuk Rosić (Beam.AI)作者的开源，二次开发，感谢开源！
 
