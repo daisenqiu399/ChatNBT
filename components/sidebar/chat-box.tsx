@@ -46,7 +46,7 @@ export const ChatBox = ({
     }
 
     return (
-        <div key={chat.title} className={cn("group relative flex w-full p-2 rounded-md hover:bg-neutral-900 cursor-pointer text-white text-sm", selected && "bg-neutral-800")} onClick={hadleClick}>
+        <div key={chat.title} className={cn("group relative flex w-full p-2 rounded-md hover:bg-neutral-200 cursor-pointer text-black text-sm", selected && "bg-neutral-200")} onClick={hadleClick}>
             {isEditing ? (
                 <input
                     type="text"
@@ -61,16 +61,16 @@ export const ChatBox = ({
             )}
             <div className="absolute top-1/2 -translate-y-1/2 right-2 flex z-10">
                 {isEditing ? (
-                    <button onClick={handleRename} className={cn("bg-gradient-to-r from-transparent from-0% to-neutral-900 to-30% pl-3 py-1", selected && "to-neutral-800")}>
+                    <button onClick={handleRename} className={cn(" pl-3 py-1", selected && "to-neutral-200")}>
                         <ArrowDownToLine />
                     </button>
                 ) : (
-                    <div className={cn("bg-gradient-to-r from-transparent from-0% to-neutral-900 to-30% space-x-2 flex pl-6 py-1", selected && "to-neutral-800")}>
+                    <div className={cn(" space-x-2 flex pl-6 py-1", selected && "to-neutral-800")}>
                         <button onClick={() => setIsEditing(true)}>
-                            <Pencil className="w-4 h-4" />
+                            <Pencil className="w-4 h-4 text-black"/>
                         </button>
                         <button onClick={handleDelete}>
-                            <Trash2 className="w-4 h-4" />
+                            <Trash2 className="w-4 h-4 text-black"/>
                         </button>
                     </div>
                 )}
