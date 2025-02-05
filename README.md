@@ -6,9 +6,10 @@
 ![ChatGPT Clone](https://i.ytimg.com/vi/_Aeu7BcMoeY/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBENGf8oDCq4nwdPXo0AFVaAy1DMQ)
 
 [视频教程](https://youtu.be/_Aeu7BcMoeY?si=f4c4QoosSys86sOV)
-运行效果如下
-![Screenshot_1](https://github.com/user-attachments/assets/892b1b0d-7e51-4a72-bd12-0e442f87af1a)
-如果你想运行代码，按照如下步骤
+
+### 运行效果如下
+![Screenshot_1](https://github.com/daisenqiu399/chatNBT/blob/main/public/demo.png)
+## 如果你想运行代码，按照如下步骤
 
 ## Required:
 Node version 14.x
