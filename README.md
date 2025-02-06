@@ -2,13 +2,12 @@
 ## 如何联系我们：
 ### QQ email:3289990188@qq.com  Google email:dshen4237@gmail.com
 ### 技术栈：Nextjs+React+convex+tailwindcss+TypeScript+ShadCN+clerk+vercel
+### github仓库地址：https://github.com/daisenqiu399/chatNBT
 
 ## [项目已经上线,点击体验](https://chat-nbt-ar5g-eight.vercel.app/)
 
 以下是本仓库的教程
 本项目基于Youtub @Vuk Rosić (Beam.AI)作者的开源，二次开发，感谢开源！
-
-
 ![ChatGPT Clone](https://i.ytimg.com/vi/_Aeu7BcMoeY/hqdefault.jpg?sqp=-oaymwEjCNACELwBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLBENGf8oDCq4nwdPXo0AFVaAy1DMQ)
 
 [视频教程](https://youtu.be/_Aeu7BcMoeY?si=f4c4QoosSys86sOV)
