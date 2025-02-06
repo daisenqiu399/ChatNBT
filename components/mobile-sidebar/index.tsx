@@ -9,9 +9,9 @@ export const MobileSidebar = () => {
         <div className="block lg:hidden">
             <Sheet>
                 <SheetTrigger>
-                    <Menu className="text-white" />
+                    <Menu className="text-black" />
                 </SheetTrigger>
-                <SheetContent side={"left"} className="h-full flex p-4 bg-neutral-950 flex-col">
+                <SheetContent side={"left"} className="h-full flex p-4 bg-neutral-200 flex-col">
                     <NewChatButton />
                     <ChatList />
                     <UpgradePlanButton />
