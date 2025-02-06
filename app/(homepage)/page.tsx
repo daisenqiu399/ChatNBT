@@ -17,7 +17,7 @@ const Homepage = () => {
     }, [storeUser, router])
 
     return (
-        <div className="bg-neutral-800 h-full text-neutral-400 text-3xl text-center px-11 pt-11">Creating a new chat</div>
+        <div className=" h-full text-neutral-800 text-3xl text-center px-11 pt-11">Creating a new chat</div>
     );
 };
 
