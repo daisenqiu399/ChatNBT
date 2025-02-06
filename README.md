@@ -1,5 +1,9 @@
-## 本项目来自ChatNBT团队，欢迎给我们提PR
-### 技术栈：Nextjs+React+convex+tailwindcss+TypeScript+ShadCN
+## 本项目来自ChatNBT团队，我们是一支年轻的团队，欢迎给我们提PR
+## 如何联系我们：QQ email:3289990188@qq.com  Google email:dshen4237@gmail.com
+### 技术栈：Nextjs+React+convex+tailwindcss+TypeScript+ShadCN+clerk+vercel
+
+## [项目已经上线,点击体验](https://chat-nbt-ar5g-eight.vercel.app/)
+
 以下是本仓库的教程
 本项目基于Youtub @Vuk Rosić (Beam.AI)作者的开源，二次开发，感谢开源！
 
