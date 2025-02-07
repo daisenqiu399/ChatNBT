@@ -41,11 +41,11 @@ export const ChatBox = ({
         remove({ id: chat._id });
         router.push('/');
     }
-    const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-        if (e.key === "Enter") {
-            handleRename();
-        }
-    }
+    // const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    //     if (e.key === "Enter") {
+    //         handleRename();
+    //     }
+    // }
 
     return (
         <div key={chat.title}
