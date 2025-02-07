@@ -16,7 +16,7 @@ export default function Markdown({ content }: MarkdownProps) {
     return (
         <ReactMarkdown
             components={{
-                code({ node, className, children, ...props }) {
+                code({className, children, ...props }) {
                     const match = /language-(\w+)/.exec(className || '')
                     return match ? (
                         <div>
