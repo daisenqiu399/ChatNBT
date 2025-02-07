@@ -12,5 +12,5 @@ export default function ChatLayout({ children }: ChatLayoutProps) {
                 {children}
             </div>
         </main>
-    )
-}
+    );
+};

@@ -7,10 +7,10 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 interface ChatBoxProps {
-    // Doc代表泛型，反正就是来自chats数据库的一条记录
     chat: Doc<"chats">;
     selected: boolean;
 }
+
 export const ChatBox = ({
     chat,
     selected
@@ -18,40 +18,35 @@ export const ChatBox = ({
     const rename = useMutation(api.chats.rename);
     const remove = useMutation(api.chats.remove);
 
-    // isEditing:是否存在重命名/删除操作。
     const [isEditing, setIsEditing] = useState(false);
     const [title, setTitle] = useState(chat.title);
 
     const router = useRouter();
 
-    // 点击左侧某个chat跳转对应的聊天框
-    const handleClick = () => {
+    const hadleClick = () => {
         if (!selected) {
             router.push(`/chat/${chat._id}`);
         }
     }
-    // 重命名某个chat
+
     const handleRename = () => {
         rename({ id: chat._id, title: title });
         setIsEditing(false);
     }
-    // 删除某个chat，并跳转首页。
+
     const handleDelete = () => {
-        // TODO，此处删除仅仅删除了chat表，没有删除关联的messages
         remove({ id: chat._id });
-        router.push('/');
+        router.push("/");
     }
-    // const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    //     if (e.key === "Enter") {
-    //         handleRename();
-    //     }
-    // }
+
+    const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+        if (e.key === "Enter") {
+            handleRename();
+        }
+    }
 
     return (
-        <div key={chat.title}
-            // 这里cn表示动态css，一方面，hover的chat需要高亮，另一方面，选中的chat也需要高亮。
-            className={cn("group relative flex w-full p-2 rounded-md hover:bg-neutral-900 cursor-pointer text-white text-sm", selected && "bg-neutral-800")}
-            onClick={handleClick}>
+        <div key={chat.title} className={cn("group relative flex w-full p-2 rounded-md hover:bg-neutral-200 cursor-pointer text-black text-sm", selected && "bg-neutral-200")} onClick={hadleClick}>
             {isEditing ? (
                 <input
                     type="text"
@@ -66,22 +61,22 @@ export const ChatBox = ({
             )}
             <div className="absolute top-1/2 -translate-y-1/2 right-2 flex z-10">
                 {isEditing ? (
-                    <button onClick={handleRename} className={cn("bg-gradient-to-r from-transparent from-0% to-neutral-900 to-30% pl-3 py-1",
-                        selected && "to-neutral-800")}>
+                    <button onClick={handleRename} className={cn(" pl-3 py-1", selected && "to-neutral-200")}>
                         <ArrowDownToLine />
                     </button>
                 ) : (
-                    <div className={cn("bg-gradient-to-r from-transparent from-0% to-neutral-900 to-30% space-x-2 flex pl-6 py-1",
-                        selected && "to-neutral-800")}>
+                    <div className={cn(" space-x-2 flex pl-6 py-1", selected && "to-neutral-800")}>
                         <button onClick={() => setIsEditing(true)}>
-                            <Pencil className="w-4 h-4" />
+                            <Pencil className="w-4 h-4 text-black"/>
                         </button>
                         <button onClick={handleDelete}>
-                            <Trash2 className="w-4 h-4" />
+                            <Trash2 className="w-4 h-4 text-black"/>
                         </button>
                     </div>
                 )}
             </div>
+
+
         </div>
     )
 }

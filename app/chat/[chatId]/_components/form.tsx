@@ -7,7 +7,6 @@ import { useState } from "react";
 interface FormProps {
     chatId: Id<"chats">;
 }
-// 输入框，与大模型对话请求对接。
 
 export const Form = ({ chatId }: FormProps) => {
     const chat = useQuery(api.chats.get, { id: chatId });
@@ -18,17 +17,20 @@ export const Form = ({ chatId }: FormProps) => {
     if (chat === undefined) {
         return null;
     }
+
     if (chat === null) {
-        return <div>Chat not found!</div>
+        return <div>Chat not found!</div>;
     }
+
     const handleSendMessage = async () => {
         if (message === "") return;
+        console.log("message sent");
         const temp = message;
         setMessage("");
         await sendMessage({
             role: "user",
             content: temp,
-            chatId: chat._id
+            chatId: chat._id,
         });
     }
 
@@ -38,15 +40,16 @@ export const Form = ({ chatId }: FormProps) => {
             handleSendMessage();
         }
     }
+
     return (
-        <div className="relative sm:px-12 md:px-52 lg:pr-[500px] 2xl:px-96 w-full bg-neutral-800">
+        <div className="relative px-2 sm:px-12 md:px-52 lg:pr-[500px] 2xl:px-30 w-full ">
             <Input
                 placeholder="Message TalkGPT..."
-                className="border-[1px] border-neutral-500 ring-none rounded-xl bg-inherit text-neutral-200 placeholder:text-neutral-400 h-12"
+                className="border-[2px] border-neutral-500 ring-none rounded-xl bg-inherit text-neutral-800 placeholder:text-neutral-500 h-12"
                 value={message}
-                onChange={e => setMessage(e.target.value)}
+                onChange={(e) => setMessage(e.target.value)}
                 onKeyDown={handleKeyDown}
             />
         </div>
-    )
-}
+    );
+};

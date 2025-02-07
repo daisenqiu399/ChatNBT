@@ -1,20 +1,20 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import './globals.css'
+import "./globals.css";
 import { ConvexClientProvider } from "@/providers/convex-client-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "ChatGPT Clone",
-  description: "Chat with AI"
-}
+  description: "Chat with AI",
+};
 
 export default function RootLayout({
   children,
-}: {
-  children: React.ReactNode
-}) {
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <html lang="en">
       <body className={inter.className}>
@@ -23,5 +23,5 @@ export default function RootLayout({
         </ConvexClientProvider>
       </body>
     </html>
-  )
+  );
 }

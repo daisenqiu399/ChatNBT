@@ -1,13 +1,12 @@
 "use client";
 
-import { Loading } from "@/components/auth/loading"
+import { Loading } from "@/components/auth/loading";
 import { api } from "@/convex/_generated/api";
 import { useConvexAuth, useMutation } from "convex/react";
 import { useRouter } from "next/navigation";
-import { useEffect } from "react"
+import { useEffect } from "react";
 
 const SignUp = () => {
-
     const { isAuthenticated } = useConvexAuth();
     const storeUser = useMutation(api.users.store);
     const router = useRouter();
@@ -17,7 +16,7 @@ const SignUp = () => {
             if (isAuthenticated) {
                 try {
                     await storeUser();
-                    router.push('/');
+                    router.push("/");
                 } catch (error) {
                     console.log(error);
                 }
@@ -26,10 +25,10 @@ const SignUp = () => {
 
         storeUserData();
     }, [isAuthenticated, storeUser, router])
+
     return (
         <Loading />
     )
-
 }
 
 export default SignUp;

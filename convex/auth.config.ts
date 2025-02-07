@@ -1,8 +1,8 @@
 export default {
     providers: [
         {
-            domain: 'https://driven-kid-3.clerk.accounts.dev/',
-            applicationID: 'convex'
-        }
+            domain: "https://champion-rooster-30.clerk.accounts.dev/",
+            applicationID: "convex",
+        },
     ]
-}
+};
