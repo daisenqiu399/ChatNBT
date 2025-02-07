@@ -1,6 +1,6 @@
 import { api } from "@/convex/_generated/api"
 import { useApiMutation } from "@/hooks/use-api-mutation";
-import { useMutation, useQuery } from "convex/react"
+import { useQuery } from "convex/react"
 import {
     Popover,
     PopoverContent,
@@ -18,7 +18,7 @@ export const SelectModel = () => {
 
     const {
         mutate: selectGPT,
-        pending: selectGPTPending,
+        // pending: selectGPTPending,
     } = useApiMutation(api.users.selectGPT);
 
     const [openSelect, setOpenSelect] = useState(false);
