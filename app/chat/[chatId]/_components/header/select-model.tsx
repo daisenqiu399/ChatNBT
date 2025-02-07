@@ -10,7 +10,7 @@ import { ChevronDown, Sparkles, Zap } from "lucide-react";
 import { useState } from "react";
 import { GPTModel } from "@/lib/types";
 import { Checkbox } from "@/components/ui/checkbox";
-import { UpgradeModel } from "./upgrade-model";
+// import { UpgradeModel } from "./upgrade-model";
 
 // 选择对话的模型
 export const SelectModel = () => {
@@ -22,7 +22,7 @@ export const SelectModel = () => {
     } = useApiMutation(api.users.selectGPT);
 
     const [openSelect, setOpenSelect] = useState(false);
-    const [openUpgradeModel, setOpenUpgradeModel] = useState(false);
+    // const [openUpgradeModel, setOpenUpgradeModel] = useState(false);
 
     if (currentUser === undefined) {
         return <div>Loading...</div>;
@@ -50,7 +50,7 @@ export const SelectModel = () => {
         if (isSubscribed) {
             selectGPT({ model });
         } else {
-            setOpenUpgradeModel(true);
+            // setOpenUpgradeModel(true);
         }
         setOpenSelect(!openSelect);
     }
@@ -61,10 +61,10 @@ export const SelectModel = () => {
 
     return (
         <>
-            <UpgradeModel
+            {/* <UpgradeModel
                 open={openUpgradeModel}
                 setOpen={setOpenUpgradeModel}
-            />
+            /> */}
             <Popover open={openSelect}>
                 <PopoverTrigger
                     onClick={toggleOpen}
